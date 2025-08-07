@@ -9,14 +9,14 @@
     <header><h1>Sending an anonymous complaint</h1></header>
     <main>
         <form action="http://localhost:3064/idf/complaint" method="post">
-        <select name="domain" id="domain" required>
+        <select name="category" id="domain" required>
           <option value="" disabled selected>choose domain</option>
           <option value="food">food</option>
           <option value="equipment">equipment</option>
           <option value="Commands">commands</option>
           <option value="other">other</option>
         </select>
-        <textarea name="comlaint" id="comlaint" placeholder="Content of the complaint" required></textarea>
+        <textarea name="complaint" id="comlaint" placeholder="Content of the complaint" required></textarea>
         <button type="submit" id="submit">submit</button>
         </form>
     </main>
