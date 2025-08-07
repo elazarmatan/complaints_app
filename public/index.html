@@ -3,9 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Anonymus complaints system</title>
 </head>
 <body>
-    
+    <header><h1>Anonymus complaints system</h1>
+    <p id="title">Do you feel like you're being bullied? Are you being taken advantage of? You're not alone. On this site, you can complain in complete anonymity about your paychecks and the IDF system.</p>
+    </header>
+    <main>
+        <a href="./complaint.html">send an anonymus comlaint</a>
+        <p id="admin">if you want to connect </p>
+        <form action="http://localhost:3064/idf/admin" method="post">
+            <input type="text" placeholder="password" required name="password">
+            <button type="submit" id="submit">submit</button>
+        </form>
+    </main>
 </body>
 </html>
