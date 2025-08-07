@@ -1,14 +1,24 @@
 import express from 'express'
+import {createComplaint,getAllComplaints} from '../db/dal.js'
 
 const router = express.Router()
 
-router.post('/admin',(req,res) => {
-    res.send('succes')
+router.post('/admin',async(req,res) => {
+    try {
+        const allComplaints = await getAllComplaints()
+        res.json(allComplaints)
+    } catch (error) {
+        res.status(400).send('error')
+    }
 })
 
-router.post('/complaint',(req,res) => {
-    console.log('hi')
-    res.send(req.body)
+router.post('/complaint',async (req,res) => {
+    try {
+        await createComplaint(req.body)
+        res.end()
+    } catch (error) {
+        res.status(400).send('error')
+    }
 })
 
 export function checkPassword(req,res,next){
