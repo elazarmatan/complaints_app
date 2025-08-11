@@ -1,21 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anonymus complaints system</title>
-</head>
-<body>
-    <header><h1>Anonymus complaints system</h1>
-    <p id="title">Do you feel like you're being bullied? Are you being taken advantage of? You're not alone. On this site, you can complain in complete anonymity about your paychecks and the IDF system.</p>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+AU+QLD:wght@100..400&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <link rel="stylesheet" href="./style.css" />
+    <header>
+      <h1>Anonymus complaints system</h1>
+      <article>
+        <p id="title">
+          Do you feel like you're being bullied? Are you being taken advantage
+          of? You're not alone. On this site, you can complain in complete
+          anonymity about your paychecks and the IDF system.
+        </p>
+      </article>
     </header>
     <main>
-        <a href="./complaint.html">send an anonymus comlaint</a>
-        <p id="admin">if you want to connect </p>
-        <form action="http://localhost:3064/idf/admin" method="post">
-            <input type="password" placeholder="password" required name="password">
-            <button type="submit" id="submit">submit</button>
-        </form>
+      <a href="./complaint.html" class="action">send an anonymus comlaint</a>
+      <article>
+        <p id="admin">if you want to connect by admin</p>
+      </article>
+      <form action="http://localhost:3064/idf/admin" method="post">
+        <input
+          type="password"
+          placeholder="password"
+          required
+          name="password"
+        />
+        <button type="submit" id="submit">submit</button>
+      </form>
     </main>
-</body>
+  </body>
 </html>
